@@ -6,3 +6,4 @@ pygwalker
 selenium
 openpyxl
 webdriver_manager
+webdriver-manager

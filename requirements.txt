@@ -9,3 +9,4 @@ webdriver_manager
 webdriver-manager
 chrome-version
 pychrome
+webdriver-manager==latest_version_here

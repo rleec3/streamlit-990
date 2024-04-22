@@ -15,17 +15,23 @@ from selenium.common.exceptions import NoSuchElementException
 
 from io import BytesIO
 import openpyxl
+import os
 
 
 
 # Setup WebDriver for Selenium
 def setup_driver():
-    service = Service(ChromeDriverManager().install())
+    
+
+    chromedriver_path = '/workspaces/streamlit-990-v3/chromedriver'
+
+    chrome_service = ChromeService(executable_path=chromedriver_path)
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')  # Important for deployment in server environments
     options.add_argument('--disable-gpu')
     options.add_argument('--no-sandbox')
-    driver = webdriver.Chrome(service=service, options=options)
+    options.add_argument('--disable-dev-shm-usage')
+    driver = webdriver.Chrome(service=chrome_service, options=options)
     return driver
 
 # Function to fetch data

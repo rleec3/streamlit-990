@@ -22,9 +22,9 @@ import os
 
 # Setup WebDriver for Selenium
 def setup_driver():
-    chromedriver_path = os.path.join(os.getcwd(), 'chromedriver')
+    #chromedriver_path = os.path.join(os.getcwd(), 'chromedriver')
 
-    #chromedriver_path = '/workspaces/streamlit-990-v3/chromedriver'
+    chromedriver_path = '/workspaces/streamlit-990-v3/chromedriver'
 
     chrome_service = ChromeService(executable_path=chromedriver_path)
     options = webdriver.ChromeOptions()
